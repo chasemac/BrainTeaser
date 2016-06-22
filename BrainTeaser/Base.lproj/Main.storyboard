@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--LoginVC-->
@@ -48,6 +49,9 @@
                                 <state key="normal" title="Login">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="Hxf-oh-5iY" kind="show" id="zVa-FJ-FZm"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uMA-Dt-pmP" customClass="CustomTextField" customModule="BrainTeaser" customModuleProvider="target">
                                 <rect key="frame" x="169" y="336" width="261" height="40"/>
@@ -86,6 +90,81 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="305" y="429"/>
+        </scene>
+        <!--GameVC-->
+        <scene sceneID="Xx6-H7-gv2">
+            <objects>
+                <viewController id="Hxf-oh-5iY" customClass="GameVC" customModule="BrainTeaser" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="PWa-6u-rqK"/>
+                        <viewControllerLayoutGuide type="bottom" id="7kg-Zj-jnS"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="wmT-yd-eQG">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="asF-2E-Kon" customClass="CustomButton" customModule="BrainTeaser" customModuleProvider="target">
+                                <rect key="frame" x="199" y="506" width="105" height="42"/>
+                                <color key="backgroundColor" red="0.066666666669999999" green="0.57254901960000004" blue="0.83137254900000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="72h-Ki-X7D"/>
+                                    <constraint firstAttribute="width" constant="105" id="AnH-xc-RYO"/>
+                                    <constraint firstAttribute="width" constant="147" id="sfT-Aa-Ccx"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="15"/>
+                                <state key="normal" title="START">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="sfT-Aa-Ccx"/>
+                                    </mask>
+                                </variation>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wQ9-0m-2YA" customClass="CustomButton" customModule="BrainTeaser" customModuleProvider="target">
+                                <rect key="frame" x="16" y="506" width="105" height="42"/>
+                                <color key="backgroundColor" red="0.066666666669999999" green="0.57254901960000004" blue="0.83137254900000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="9QF-mu-0pB"/>
+                                    <constraint firstAttribute="width" constant="105" id="Kit-Qj-de4"/>
+                                    <constraint firstAttribute="width" constant="147" id="nJm-KB-JHd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="15"/>
+                                <state key="normal" title="NO">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="nJm-KB-JHd"/>
+                                    </mask>
+                                </variation>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Remember this image" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fpy-a7-rZn">
+                                <rect key="frame" x="20" y="63" width="280" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="280" id="0Zf-Ul-aGj"/>
+                                    <constraint firstAttribute="height" constant="21" id="egp-Lv-Idh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="7kg-Zj-jnS" firstAttribute="top" secondItem="asF-2E-Kon" secondAttribute="bottom" constant="20" id="LKa-ox-GXY"/>
+                            <constraint firstItem="fpy-a7-rZn" firstAttribute="centerX" secondItem="wmT-yd-eQG" secondAttribute="centerX" id="g54-e7-Otm"/>
+                            <constraint firstItem="fpy-a7-rZn" firstAttribute="top" secondItem="PWa-6u-rqK" secondAttribute="bottom" constant="43" id="hPd-Ip-GAm"/>
+                            <constraint firstItem="7kg-Zj-jnS" firstAttribute="top" secondItem="wQ9-0m-2YA" secondAttribute="bottom" constant="20" id="irY-3z-vnJ"/>
+                            <constraint firstItem="wQ9-0m-2YA" firstAttribute="leading" secondItem="wmT-yd-eQG" secondAttribute="leadingMargin" id="ub6-Bo-uOT"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="asF-2E-Kon" secondAttribute="trailing" id="yjq-32-vht"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="J6n-mS-6bp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="975" y="429"/>
         </scene>
     </scenes>
     <resources>

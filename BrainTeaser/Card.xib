@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="Card" customModule="BrainTeaser" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="250" height="250"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shape1" translatesAutoresizingMaskIntoConstraints="NO" id="5Bc-kl-SSz">
+                    <rect key="frame" x="25" y="25" width="200" height="200"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="200" id="9rh-tc-r3x"/>
+                        <constraint firstAttribute="height" constant="200" id="SzK-PJ-Ka1"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="5Bc-kl-SSz" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="sAQ-uK-oJe"/>
+                <constraint firstItem="5Bc-kl-SSz" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="szV-sE-yHi"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="shapeImage" destination="5Bc-kl-SSz" id="0zE-Q9-1xY"/>
+            </connections>
+        </view>
+    </objects>
+    <resources>
+        <image name="shape1" width="268" height="143"/>
+    </resources>
+</document>
