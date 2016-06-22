@@ -40,7 +40,7 @@ class CustomButton: UIButton {
         self.addTarget(self, action: #selector(CustomButton.scaleToSmall), forControlEvents: .TouchDown)
         self.addTarget(self, action: #selector(CustomButton.scaleToSmall), forControlEvents: .TouchDragEnter)
         self.addTarget(self, action: #selector(CustomButton.scaleAnimation), forControlEvents: .TouchUpInside)
-        self.addTarget(self, action: #selector(CustomButton.scaleDefault), forControlEvents: .TouchUpInside)
+        self.addTarget(self, action: #selector(CustomButton.scaleDefault), forControlEvents: .TouchDragExit)
     }
     
     func scaleToSmall() {
