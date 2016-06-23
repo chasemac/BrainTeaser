@@ -24,6 +24,11 @@
                 <constraint firstItem="5Bc-kl-SSz" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="szV-sE-yHi"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                    <real key="value" value="5"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
             <connections>
                 <outlet property="shapeImage" destination="5Bc-kl-SSz" id="0zE-Q9-1xY"/>
             </connections>

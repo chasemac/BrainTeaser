@@ -120,6 +120,9 @@
                                         <exclude reference="sfT-Aa-Ccx"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <action selector="yesPressed:" destination="Hxf-oh-5iY" eventType="touchUpInside" id="gic-AF-e2a"/>
+                                </connections>
                             </button>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wQ9-0m-2YA" customClass="CustomButton" customModule="BrainTeaser" customModuleProvider="target">
                                 <rect key="frame" x="16" y="506" width="105" height="42"/>
@@ -138,9 +141,12 @@
                                         <exclude reference="nJm-KB-JHd"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <action selector="noPressed:" destination="Hxf-oh-5iY" eventType="touchUpInside" id="9m5-fc-SkX"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Remember this image" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fpy-a7-rZn">
-                                <rect key="frame" x="20" y="63" width="280" height="21"/>
+                                <rect key="frame" x="20" y="90" width="280" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="280" id="0Zf-Ul-aGj"/>
                                     <constraint firstAttribute="height" constant="21" id="egp-Lv-Idh"/>
@@ -154,13 +160,18 @@
                         <constraints>
                             <constraint firstItem="7kg-Zj-jnS" firstAttribute="top" secondItem="asF-2E-Kon" secondAttribute="bottom" constant="20" id="LKa-ox-GXY"/>
                             <constraint firstItem="fpy-a7-rZn" firstAttribute="centerX" secondItem="wmT-yd-eQG" secondAttribute="centerX" id="g54-e7-Otm"/>
-                            <constraint firstItem="fpy-a7-rZn" firstAttribute="top" secondItem="PWa-6u-rqK" secondAttribute="bottom" constant="43" id="hPd-Ip-GAm"/>
+                            <constraint firstItem="fpy-a7-rZn" firstAttribute="top" secondItem="PWa-6u-rqK" secondAttribute="bottom" constant="70" id="hPd-Ip-GAm"/>
                             <constraint firstItem="7kg-Zj-jnS" firstAttribute="top" secondItem="wQ9-0m-2YA" secondAttribute="bottom" constant="20" id="irY-3z-vnJ"/>
                             <constraint firstItem="wQ9-0m-2YA" firstAttribute="leading" secondItem="wmT-yd-eQG" secondAttribute="leadingMargin" id="ub6-Bo-uOT"/>
                             <constraint firstAttribute="trailingMargin" secondItem="asF-2E-Kon" secondAttribute="trailing" id="yjq-32-vht"/>
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="noBtn" destination="wQ9-0m-2YA" id="suY-2T-b8o"/>
+                        <outlet property="titleLbl" destination="fpy-a7-rZn" id="Kdo-mG-LDY"/>
+                        <outlet property="yesBtn" destination="asF-2E-Kon" id="E7P-qX-RQo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J6n-mS-6bp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
